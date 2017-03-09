@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Expense Details</ion-title>
+    <ion-buttons end>
+      <!--<button ion-button icon-only (click)="refereshServiceAgain()"><ion-icon color="primary"  name="refresh"></ion-icon></button>-->
+
+           <button ion-button icon-only (click)="modifyExpense()"><ion-icon color="primary"  name="create"></ion-icon></button>
+
+
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        Document Info
+      </ion-card-title>
+     <div> DocumentNo : {{DocumentNo}} </div>
+         <!--<div>Description : {{Description}}</div>-->
+         <div>Status : {{Status}}</div>
+         <div>DateReport : {{DateReport}}</div>
+    </ion-card-content>
+  </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>
+          Amount Info
+        </ion-card-title>
+           <div>ExpenseAmt : {{ExpenseAmt}}</div>
+           <div>ApprovedAmt : {{ApprovedAmt}}</div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>
+          Misc Info
+        </ion-card-title>
+           <div>ApprovedBy : {{ApprovedBy}}</div>
+            <div>Expense Type: {{expenseType}}</div>
+              <div>Expense Desc:  {{Description}}</div>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

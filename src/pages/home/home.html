@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Expenses List
+    </ion-title>
+
+    <ion-buttons end>
+
+      <button ion-button icon-only (click)="refereshServiceAgain()"><ion-icon color="primary"  name="refresh"></ion-icon></button>
+
+      <button ion-button icon-only padding-right (click)="createExpense()"><ion-icon color="primary" name="add-circle"></ion-icon></button>
+
+
+
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <button ion-item text-wrap detail-push *ngFor="let item of expenseList" (click)="expenseDetailsSelected(item)">
+          No.:      {{item.field[8].val.toString()}}  <br/>
+          Desc: {{item.field[9].val.toString()}} <br/>
+          Expense Amt:   {{item.field[2].val.toString()}}  <br/>
+          Status: {{item.field[5].val.toString()}}
+        </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,51 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Expense Create</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <ion-list>
+    <form [formGroup]="frmGrp" >
+
+
+
+      <ion-item>
+        <ion-label>Expense Type</ion-label>
+<ion-select   formControlName="ExpenseType"  >
+          <ion-option value="1000006">Food Exp</ion-option>
+          <ion-option value="1000005">Internet Exp</ion-option>
+            <ion-option value="1000004">Telephone Exp</ion-option>
+          <ion-option value="100">Travel Cost</ion-option>
+
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="number"  placeholder="Expense Amount" formControlName="ExpenseAmt"></ion-input>
+      </ion-item>
+
+ <ion-item>
+        <ion-input type="text"  placeholder="Description" formControlName="Description"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>Date Report</ion-label>
+        <ion-datetime displayFormat="DD-MMM-YYYY" formControlName="DateReport"  [(ngModel)]="DateReport"></ion-datetime>
+      </ion-item>
+
+
+<div  *ngIf="spinnersearching" class="spinner-container,textaligncenter">
+    <ion-spinner></ion-spinner>
+  </div>
+
+        <button ion-button primary full default type="submit"  (click)="createExpense()">Create Expense</button>
+
+    </form>
+  </ion-list>
+</ion-content>
