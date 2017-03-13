@@ -141,7 +141,7 @@ export class ExpenseCreatePage {
   }
 
   getIdempiereRestServerUrl(): string {
-    let resturl: string = "http://45.79.96.174/ADInterface/services/rest/model_adservice/create_data";
+    let resturl: string = "http://23.239.5.32/ADInterface/services/rest/model_adservice/create_data";
     return resturl;
   }
 
